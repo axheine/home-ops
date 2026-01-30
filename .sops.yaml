@@ -7,6 +7,10 @@ creation_rules:
     encrypted_regex: "^(data|stringData)$"
     mac_only_encrypted: true
     age: "age1dmpngq98hxwc5dxe35nhrjv76efh23hyg3q42marshyce0k0d4msjhk4zd"
+  - path_regex: kubernetes/secrets/.*\.yaml
+    encrypted_regex: "^(data|stringData)$"
+    mac_only_encrypted: true
+    age: "age1dmpngq98hxwc5dxe35nhrjv76efh23hyg3q42marshyce0k0d4msjhk4zd"
 stores:
   yaml:
     indent: 2

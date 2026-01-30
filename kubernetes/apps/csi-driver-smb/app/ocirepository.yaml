@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: csi-driver-smb
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: oci://registry.k8s.io/csi-driver-smb/csi-driver-smb
+  ref:
+    tag: v1.15.0
