@@ -6,14 +6,9 @@ metadata:
 spec:
   interval: 30m
   releaseName: csi-driver-smb
-
-  chart:
-    spec:
-      chart: csi-driver-smb
-      sourceRef:
-        kind: OCIRepository
-        name: csi-driver-smb
-        namespace: flux-system
+  chartRef:
+    kind: OCIRepository
+    name: csi-driver-smb
 
   install:
     createNamespace: true
