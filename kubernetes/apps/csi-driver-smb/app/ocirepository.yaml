@@ -5,6 +5,6 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  url: oci://registry.k8s.io/csi-driver-smb/csi-driver-smb
+  url: oci://registry.k8s.io/csi-driver-smb/charts
   ref:
     tag: v1.15.0
