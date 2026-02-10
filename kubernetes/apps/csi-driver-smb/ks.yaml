@@ -1,7 +1,20 @@
 ---
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
-namespace: csi-smb
-resources:
-  - ./helmrelease.yaml
-  - ./ocirepository.yaml
+metadata:
+  name: csi-driver-smb
+  namespace: csi-smb
+spec:
+  interval: 1h
+  path: ./kubernetes/apps/csi-driver-smb/app
+  postBuild:
+    substituteFrom:
+      - name: smb-creds
+        kind: Secret
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  targetNamespace: flux-system
+  wait: false
