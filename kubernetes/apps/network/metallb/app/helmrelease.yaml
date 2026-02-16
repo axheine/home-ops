@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: metallb
-  namespace: network
 spec:
   interval: 15m
   chart:
@@ -12,5 +11,4 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: metallb
-        namespace: flux-system
   values: {}
