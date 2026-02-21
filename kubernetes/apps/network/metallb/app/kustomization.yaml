@@ -4,5 +4,3 @@ kind: Kustomization
 resources:
   - helmrepository.yaml
   - helmrelease.yaml
-  - ipaddresspool.yaml
-  - l2advertisement.yaml
