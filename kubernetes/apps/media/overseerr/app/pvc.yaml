@@ -8,4 +8,4 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: <TA_STORAGE_CLASS>
+  storageClassName: smb-csi
