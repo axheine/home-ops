@@ -1,0 +1,15 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: smb-storage
+provisioner: smb.csi.k8s.io
+parameters:
+  source: "//192.168.1.46/k8s-das"
+  csi.storage.k8s.io/node-stage-secret-name: smb-creds
+  csi.storage.k8s.io/node-stage-secret-namespace: csi-smb
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+mountOptions:
+  - dir_mode=0777
+  - file_mode=0777
+  - vers=3.0
