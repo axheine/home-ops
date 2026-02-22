@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: csi-smb
 resources:
   - ./helmrelease.yaml
-  - ./ocirepository.yaml
+  - ./helmrepository.yaml
